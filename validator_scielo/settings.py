@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'b4d04372bf3a44af9a1546545a34950d.vfs.cloud9.us-east-1.amazonaws.com',
-    'ec2-18-208-159-82.compute-1.amazonaws.com'
+    'ec2-18-208-159-82.compute-1.amazonaws.com',
+    'validator-scielo.herokuapp.com'
 ]
 
 
@@ -133,3 +135,6 @@ NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=validator_scielo.core',
 ]
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
