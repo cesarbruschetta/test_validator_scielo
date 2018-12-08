@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_nose',
+    'corsheaders',
     'validator_scielo.core'
 ]
 
@@ -120,6 +121,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = (
+    'ec2-3-80-164-237.compute-1.amazonaws.com',
+)
 
 
 # Static files (CSS, JavaScript, Images)
